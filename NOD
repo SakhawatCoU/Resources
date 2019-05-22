@@ -1,0 +1,18 @@
+int numberOfdivisor(int n)
+{
+    int tot = 1;
+
+    for(int i=2; i*i<=n; i++)
+    {
+        int sum = 0;
+        while(n%i==0)
+        {
+            sum++;
+            n/=i;
+        }
+        tot = tot*(sum+1);
+    }
+    if(n>1)
+        tot*=2;
+    return tot;
+}
