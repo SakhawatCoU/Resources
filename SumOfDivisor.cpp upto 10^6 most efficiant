@@ -1,0 +1,112 @@
+#include<bits/stdc++.h>
+#define int long long
+#define scf(n) scanf("%lld",&n)
+#define rep1(n) for(int i=1;i<=n;i++)
+#define prf(n) printf("%lld",n)
+#define sci(n) scanf("%lld",&n)
+#define pri(n) printf("%lld",n)
+
+#define nl printf("\n")
+#define spc printf(" ")
+#define file freopen("in.txt","rt",stdin)
+#define pii pair<int,int>
+#define piii pair<pii,int>
+#define MOD 10000007
+using namespace std;
+
+/*bool sortBySec(const pair<int,int> &a,const pair<int,int> &b)
+{
+    return (a.second < b.second);
+}*/
+void faster(void)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+}
+/******************************************/
+
+int mark[1000009];
+vector<int>prime;
+int n,limit;
+void seive()
+{
+    mark[0] = 1;
+    mark[1] = 1;
+
+    for(int i=4; i<=n; i+=2)
+        mark[i] = 1;
+    prime.push_back(2);
+    for(int i=3; i<=limit; i+=2)
+    {
+        if(mark[i]==0)
+        {
+            prime.push_back(i);
+            if(i<=limit)
+            {
+                for(int j=i*i; j<=n; j=j+i*2)
+                    mark[j] = 1;
+            }
+        }
+    }
+
+}
+
+int sumOfDivisor(int n)
+{
+    int m = n;
+    int tot = 1;
+    for(auto x : prime)
+    {
+        if(m<x)
+            break;
+        if(m%x==0)
+        {
+            int cnt = 0;
+            while(m%x==0)
+            {
+                cnt++;
+                m = m / x;
+            }
+            tot = tot*(ceil(pow(x,cnt+1)-1)/(x-1));
+
+            if(mark[m]==0)
+            {
+                tot = tot*(ceil(pow(m,2)-1)/(m-1));
+                return tot;
+            }
+        }
+        if(mark[m]==0)
+        {
+            tot = tot*(ceil(pow(m,2)-1)/(m-1));
+            return tot;
+        }
+
+    }
+    if(m>1)
+    {
+        tot = tot*(ceil(pow(m,2)-1)/(m-1));
+    }
+    return tot;
+
+}
+int arr[1000009];
+int32_t main()
+{
+    /***********************************/
+//#ifdef ONPC
+//    freopen("in.txt", "r", stdin);
+//    freopen("out.txt", "w", stdout);
+//#endif
+//    //faster();
+
+    /*********************************/
+    n = 1000001;
+    limit = sqrt(1000001);
+    seive();
+    cout<<sumOfDivisor(12);
+    //  cout<<prime.size();
+
+
+    return 0;
+}
