@@ -1,0 +1,141 @@
+The topics that are covered:
+
+1. Swift language fundamentals like variables,data types, string,arrays,dictionary,sets,enum(case),loops,functions,struct,property (didSet),computed property,method (function in struct),access control,static properties,laziness,class and inheritance.
+2. Some extra features of swift like clouser , protocol and delegate, optional,unwrapping.
+
+3. Project 01: loading some images from the app directory,showing names in a list and display in a new window.
+    1. FileManager
+    2. Bundle (path)
+    3. UITableViewController
+        1. numberOfRowsInSection (OM)
+        2. cellForRowAt (OM)
+    4. UIImageView
+        1.didSelectRowAt
+    5. UINavigationController
+        1.hidesBarsOnTap (OM)
+    6. DetailViewController (CC)
+4. Project 02: Guess the flag: Layout design (auto layout)
+    1. CALayer
+    2. Random number and suffle
+    3. UIButton
+        1.buttonTapped
+    4. Use same function for many object using Tag
+    5. UIAlertController
+5. Project 03: (Share photo to other) It's extension project of project 01
+    1.UIActivityViewController
+    2.popoverPresentationController
+    3.plist permission
+6. Project 04: Web Browser (:) Framework : WebKit
+    1. WKWebView
+        1.loadView
+    2. UIToolbar
+    3. UIProgressView
+    4. navigationDelegate
+        Ex:A delegate is one thing acting in place of another, effectively answering questions and responding to events on its behalf
+    5. Protocol
+    6. URL loading into View
+    7. WKNavigationDelegate (Pr)
+    8. flexibleSpace
+    9. key-value observing (KVO)
+    10. decisionHandler
+7. Project 05: Word Game (Capture lists in Swift: what’s the difference between weak, strong, and unowned references)
+    1. Reading from disk (contentsOf)
+    2. addTextField
+    3. Clouser ( _ in and weak self)
+    4. insertRows
+    5. rangeOfMisspelledWord (NSRange , NSNotFound)
+    6. errorTitle & errorMessage
+8. Project 06: Fixing layout issues of "Guess the flag" game. (Must review again)
+    1. Advanced Auto Layout
+    2. translatesAutoresizingMaskIntoConstraints
+    3. NSLayoutConstraint.constraints(withVisualFormat:)
+    4. Auto Layout anchors
+        1 widthAnchor,
+          heightAnchor,
+          topAnchor,
+          bottomAnchor,
+          leftAnchor,
+          rightAnchor,
+          leadingAnchor,
+          trailingAnchor,
+          centerXAnchor,
+          and centerYAnchor
+9. Project 07: Loading and fitching JSON file from loacal and internet.
+    1.UITabBarController
+    2. tableView.dequeueReusableCell
+    3. Codable protocol
+    4. WKWebView (loadHTMLString)
+    5. didFinishLaunchingWithOptions(M)
+10. Project 08: Matching Name with clues Game (level1.text, level2.text)
+    1. Building a UIKit user interface programmatically
+        1.NSLayoutConstraint.activate()
+        2.touchUpInside
+11. Project 09: GCD 101: async()
+    1.main thread: DispatchQueue.main
+    2. GCD using performSelector(inBackground:)
+12. Project 10: Showing image in app CollectionView
+    1.UICollectionViewController
+        1.UICollectionViewCell
+    2.UIImagePickerController (UUID)
+        1.allowsEditing
+        2.UIImagePickerControllerDelegate(Pr)
+        3.UINavigationControllerDelegate(Pr)
+        4.didFinishPickingMediaWithInfo
+        5.getDocumentsDirectory
+        6.FileManager.default.urls
+    3. Custom subclasses of NSObject
+    
+13. Project 11: SpriteKit : Paggle games
+14. Project 12: Fixing Project 10: NSCoding
+    1.Reading and writing basics: UserDefaults
+15. Project 13: Choosing Image and rename the title of Image
+    1. Applying filters: CIContext, CIFilter
+    2. CIImage
+    3.kCIInputImageKey
+    4.kCIInputIntensityKey
+    5.CIBumpDistortion
+    6.Saving to the iOS photo library
+        1.UIImageWriteToSavedPhotosAlbum
+16. Project 14: Game : Whak a mole
+17. Project 15: UIAnimation practice
+    1.animate(withDuration:)
+    2.Transform: CGAffineTransform
+        1.rotationAngle
+18. Project 16: MapKit (Pointing two points in map)
+   1.MKMapView
+   2.CLLocationCoordinate2D
+   3.MKAnnotation
+   4.MKPinAnnotationView
+        1.canShowCallout
+        2.detailDisclosure
+    5.calloutAccessoryControlTapped
+19. Project 17: Space Race (Games: SpriteKit)
+20. Project 18: Debuging Techniques
+N:B: Project 19: Safary Extension (Skipped)
+21. Project 20: Games : FireWorks Light
+    1.Timer
+        1.gameTimer
+    2.colorBlendFactor
+    3.UIBezierPath
+    4.checkTouches,touchesMoved,touchesBegan
+    5.SKEmitterNode
+22. Project 21: Notification on app NotificationBar
+    0. UNUserNotificationCenter
+    1.UNUserNotificationCenter and UNNotificationRequest
+    2.requestAuthorization
+    3.UNNotificationCategory
+    4.UNUserNotificationCenterDelegate
+23. Project 22: iBeacon
+24. Project 24: Swift Sring
+25. Project 25: Photo sharing nearest to iPhone
+25. Project 27: Core Graphics Practice
+    1.Rectangle
+    2.Cicle
+    3.Chees Board
+    4.Line Drawing
+    5.Rotation of squre.
+26. Project 28: Face ID, TouchID,Security Issues
+    5.UNNotificationDefaultActionIdentifier
+
+    
+    
